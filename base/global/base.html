@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'home/css/blue.css'%}">
     <link rel="stylesheet" href="{% static 'global/css/style.css'%}">
 </head>
 <body>
-    {% block texto %}ESSE É O TEXTO BASE{% endblock texto %}
+
+    {% block texto %}{{ text }}{% endblock texto %}
+    {% include "global/partials/menu.html" %}
+<main class="main">
+    {% block content %}{% endblock content %}
+</main>
+
 </body>
 </html>

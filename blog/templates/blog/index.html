@@ -1,3 +1,9 @@
 {% extends "global\base.html" %}
 
 {% block texto %}ESSE É O BLOCO TEXTO NO BLOG{% endblock texto %}
+
+{% block content %}
+    {% for post in posts %}
+        {% include "global/partials/post.html" %}
+    {% endfor %}
+{% endblock content %}
