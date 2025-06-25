@@ -1,3 +1,8 @@
-{% extends "global\base.html" %}
+{% extends "global\base.html" %}{% load static%}
 
-{% block texto %}ESSE É O BLOCO TEXTO NO HOME{% endblock texto %}
+
+{% block texto %}
+
+    {{ text }}
+
+{% endblock texto %}

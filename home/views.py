@@ -2,4 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    return render(request, "home\index.html")
+
+    contexto = {
+        'text': 'Estamos na Home!!'
+    }
+    return render(request, "home\index.html", contexto)
